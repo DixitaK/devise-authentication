@@ -3,9 +3,6 @@ class WelcomeController < ApplicationController
   end
   def show
     @q = User.ransack(params[:q])
-    @users = @q.result
-
-    @users = User.page(params[:page]).per(4)
-
+    @users = @q.result.page(params[:page]).per(4)
   end
 end
