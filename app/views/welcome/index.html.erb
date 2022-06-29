@@ -1,7 +1,9 @@
 <h1>Hello, User!</h1>
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
+  <% if can? :account_update, @user %>
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <% end %>
   <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => 'navbar-link'  %> 
   <br><br/>
   <%= link_to "Invite Another User",new_user_invitation_path %>
