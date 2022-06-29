@@ -7,6 +7,10 @@ gem 'devise'
 
 gem 'devise_invitable'
 
+gem 'pry'
+
+gem "cancancan", "~> 3.4"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
@@ -74,3 +78,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
