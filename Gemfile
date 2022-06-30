@@ -7,6 +7,8 @@ gem 'devise'
 
 gem 'devise_invitable'
 
+gem "pundit"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
