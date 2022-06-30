@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-         belongs_to :role
+  belongs_to :role
+
+  def admin?
+    role.name == 'admin'
+  end
 end
