@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   
   # Defines the root path route ("/")
   root "welcome#index"
-
+  resources :posts, except: :show
+  get '/posts/:id', to: 'posts#destroy', as: 'post_path'
 end
